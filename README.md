@@ -21,23 +21,23 @@ Para mostrar a lista irei usar um evento de click, onde quando o botão for clic
 
 - No arquivo de código JS, criei as constantes para refenciar a lista e o botao:
 
-    const lista = document.querySelector("ul");
-    const botao = document.querySelector(".botao-lista");
+        const lista = document.querySelector("ul");
+        const botao = document.querySelector(".botao-lista");
 
 - Usei o addEventListener no elemento botao para adicionar o evento de click nele:
 
-    botao.addEventListener("click", () => 
+        botao.addEventListener("click", () => 
 
 - Dentro do .addEventListener passei o evento que quero que ocorra: a adição de um atributo no elemento lista. Para adicionar o atributo usei o setAttribute:
 
-    lista.setAttribute("data-lista", "mostrar");
+        lista.setAttribute("data-lista", "mostrar");
 
 - No arquivo CSS, chamei o data attribute adicionando a ele a propriedade display: block, então quando atribuido ao elemento lista fará com que o elemento receba essa propriedade e apareça na tela com o click. 
 
-    [data-lista="mostrar"]{
-    
-        display: block;    
-    }
+        [data-lista="mostrar"]{
+
+            display: block;    
+        }
 
 PARTE 3:
 Para adicionar um botão que faça a lista fechar, precisarei criar um botão de "fechar" no código HTML e também me atentar ao detalhe que ele precisa aparecer apenas quando a lista tiver aberta e sumir quando fecharmos a lista.
@@ -52,12 +52,12 @@ Para adicionar um botão que faça a lista fechar, precisarei criar um botão de
 
 - Para o botao-fechar aparecer junto com a lista também adicionei a ele o data attribute:
 
-    botao.addEventListener("click", () => {
-    
-        lista.setAttribute("data-lista", "mostrar");
-        
-        fechar.setAttribute("data-lista", "mostrar");
-    });
+        botao.addEventListener("click", () => {
+
+            lista.setAttribute("data-lista", "mostrar");
+
+            fechar.setAttribute("data-lista", "mostrar");
+        });
 
 Agora quando clico no botão aparece a lista e o botão de fechar.
 
@@ -66,18 +66,18 @@ Para o botão fechar fazer a lista sumir e sumir junto, usarei como base o códi
 
 - No arquivo SJ, adicionei o evento ao botao-fechar, então usei a constante fechar:
 
-    fechar.addEventListener("click", () => {
-    
-        lista.setAttribute("data-lista", "esconder");
-        
-        fechar.setAttribute("data-lista", "esconder");
-    });
+        fechar.addEventListener("click", () => {
+
+            lista.setAttribute("data-lista", "esconder");
+
+            fechar.setAttribute("data-lista", "esconder");
+        });
 
 - No arquivo CSS, chamei o data attribute e adicionei a propriedade display: none:
 
-    [data-lista="esconder"] {
-    
-        display: none;
-    }
+        [data-lista="esconder"] {
+
+            display: none;
+        }
 
 Agora quando clico no botão fechar a lista some e o botão fechar some junto. 
