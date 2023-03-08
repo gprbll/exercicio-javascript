@@ -35,6 +35,7 @@ Para mostrar a lista irei usar um evento de click, onde quando o botão for clic
 - No arquivo CSS, chamei o data attribute adicionando a ele a propriedade display: block, então quando atribuido ao elemento lista fará com que o elemento receba essa propriedade e apareça na tela com o click. 
 
     [data-lista="mostrar"]{
+    
         display: block;    
     }
 
@@ -52,7 +53,9 @@ Para adicionar um botão que faça a lista fechar, precisarei criar um botão de
 - Para o botao-fechar aparecer junto com a lista também adicionei a ele o data attribute:
 
     botao.addEventListener("click", () => {
+    
         lista.setAttribute("data-lista", "mostrar");
+        
         fechar.setAttribute("data-lista", "mostrar");
     });
 
@@ -64,13 +67,16 @@ Para o botão fechar fazer a lista sumir e sumir junto, usarei como base o códi
 - No arquivo SJ, adicionei o evento ao botao-fechar, então usei a constante fechar:
 
     fechar.addEventListener("click", () => {
+    
         lista.setAttribute("data-lista", "esconder");
+        
         fechar.setAttribute("data-lista", "esconder");
     });
 
 - No arquivo CSS, chamei o data attribute e adicionei a propriedade display: none:
 
     [data-lista="esconder"] {
+    
         display: none;
     }
 
