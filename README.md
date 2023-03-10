@@ -58,8 +58,8 @@ Para adicionar um botão que faça a lista fechar, precisarei criar um botão de
 
 Agora quando clico no botão aparece a lista e o botão de fechar.
 
-Parte 4:
-Para o botão fechar fazer a lista sumir e sumir junto, usarei como base o código usado para mostrar, mudando apenas o data attribute para "esconder". E para isso no arquivo CSS vou dar a ele a propriedade display: none, assim quando atribuídos aos elementos, eles iram sumir da página do navegador.
+PARTE 4:
+Para o botão fechar fazer a lista sumir e sumir junto, usarei como base o código usado para mostrar, mudando apenas o data attribute para "esconder". E para isso no arquivo CSS vou dar a ele a propriedade display: none, assim quando atribuídos aos elementos, eles irão sumir da página do navegador.
 
 - No arquivo SJ, adicionei o evento ao botao-fechar, então usei a constante fechar:
 
